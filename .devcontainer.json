@@ -1,0 +1,56 @@
+{
+  "name": "SST Tutorial 2 (Java, SAST & Typst)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "1",
+      "TYPST_VERSION": "v0.11.0"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // Java & Scala Extensions
+        "vscjava.vscode-java-pack",
+        "scalameta.metals",
+        // Security & Formatters
+        "Semgrep.semgrep",
+        "redhat.vscode-yaml",
+        // Git & Collaboration
+        "gitlab.gitlab-workflow",
+        "github.vscode-pull-request-github",
+        // Typst & Docs
+        "myriad-dreamin.tinymist",
+        "tomoki1207.pdf",
+        // Quality of Life Tools
+        "adpyke.codesnap",
+        "codesmith.markdown-inline-editor-vscode",
+        "shardulm94.trailing-spaces",
+        "stkb.rewrap",
+        "codista.vscode-autosave"
+      ],
+      "settings": {
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "[typst]": {
+          "editor.formatOnSave": true
+        },
+        "tinymist.formatterMode": "typstyle",
+        "files.associations": {
+          "*.typ": "typst"
+        }
+      }
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils": {
+      "installZsh": true,
+      "username": "vscode",
+      "upgradePackages": true
+    }
+  }
+}

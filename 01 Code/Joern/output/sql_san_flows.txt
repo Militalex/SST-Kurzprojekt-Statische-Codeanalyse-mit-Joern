@@ -1,0 +1,248 @@
+
+┌──────────────────┬────────────────────────────────────────────┬────┬─────────────┬─────────────────────────────────────────────┐
+│nodeType          │tracked                                     │line│method       │file                                         │
+├──────────────────┼────────────────────────────────────────────┼────┼─────────────┼─────────────────────────────────────────────┤
+│Call              │column.getColumnNameKey()                   │1008│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│MethodParameterIn │truncate(this, final String nameKey, Object │929 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │value)                                      │    │             │                                             │
+│Identifier        │this.columnMetaData.get(nameKey)            │931 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.columnMetaData.get(nameKey)            │931 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │logger().error("Missing                     │940 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │ResultSetColumnMetaData for {},             │    │             │                                             │
+│                  │connection={}, statement={}", nameKey,      │    │             │                                             │
+│                  │connection, statement)                      │    │             │                                             │
+│Call              │logger().error("Missing                     │940 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │ResultSetColumnMetaData for {},             │    │             │                                             │
+│                  │connection={}, statement={}", nameKey,      │    │             │                                             │
+│                  │connection, statement)                      │    │             │                                             │
+│MethodParameterOut│RET                                         │929 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │this.truncate(column.getColumnNameKey(),    │1007│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │column.getLayout().toSerializable(event))   │    │             │                                             │
+│Call              │this.statement.setNString(j++,              │1004│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │Objects.toString(truncate(column.getColumnNameKey(),│    │             │                                             │
+│                  │column.getLayout().toSerializable(event)),  │    │             │                                             │
+│                  │null))                                      │    │             │                                             │
+│Call              │this.statement.setTimestamp(j++, new        │995 │writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │Timestamp(event.getTimeMillis()))           │    │             │                                             │
+│Call              │this.statement.setNClob(j++, reader)        │999 │writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.setClob(j++, reader)         │1001│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │this.isBuffered()                           │1022│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│MethodParameterIn │isBuffered(this)                            │202 │isBuffered   │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Call              │this.bufferSize > 0                         │203 │isBuffered   │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterOut│RET                                         │202 │isBuffered   │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.isBuffered()                           │1022│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.executeUpdate()              │1026│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.executeUpdate()              │1026│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+└──────────────────┴────────────────────────────────────────────┴────┴─────────────┴─────────────────────────────────────────────┘
+
+┌──────────────────┬───────────────────────────────────────┬────┬───────────────────────┬────────────────────────────────────────┐
+│nodeType          │tracked                                │line│method                 │file                                    │
+├──────────────────┼───────────────────────────────────────┼────┼───────────────────────┼────────────────────────────────────────┤
+│Call              │this.registry.get(type)                │77  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Identifier        │TypeConverter primary =                │77  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│                  │registry.get(type)                     │    │                       │                                        │
+│Identifier        │primary != null                        │79  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Identifier        │return primary;                        │80  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Return            │return primary;                        │80  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│MethodReturn      │RET                                    │75  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Call              │TypeConverterRegistry.getInstance().findCompatibleConverter(clazz)│429 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│Call              │(TypeConverter<T>)                     │429 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │TypeConverterRegistry.getInstance().findCompatibleConverter(clazz)│    │                       │                                        │
+│Identifier        │TypeConverter converter =              │428 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │(TypeConverter<T>)                     │    │                       │                                        │
+│                  │TypeConverterRegistry.getInstance().findCompatibleConverter(clazz)│    │                       │                                        │
+│Identifier        │parseDefaultValue(converter,           │433 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│MethodParameterIn │parseDefaultValue(final                │449 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │TypeConverter<T> converter, final      │    │                       │                                        │
+│                  │Object defaultValue)                   │    │                       │                                        │
+│Identifier        │converter.convert((String)             │457 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│Call              │converter.convert((String)             │457 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│Return            │return converter.convert((String)      │457 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue);                         │    │                       │                                        │
+│MethodReturn      │RET                                    │449 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│Call              │parseDefaultValue(converter,           │433 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│Return            │return parseDefaultValue(converter,    │433 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue);                         │    │                       │                                        │
+│MethodReturn      │RET                                    │426 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│Call              │TypeConverters.convert(columnMapping.getLayout().toSerializable(event),│107 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│                  │columnMapping.getType(), null)         │    │                       │                                        │
+│Call              │values[i] =                            │107 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│                  │TypeConverters.convert(columnMapping.getLayout().toSerializable(event),│    │                       │                                        │
+│                  │columnMapping.getType(), null)         │    │                       │                                        │
+│Call              │this.preparedStatement.bind(values)    │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Call              │this.preparedStatement.bind(values)    │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Call              │this.preparedStatement.bind(values)    │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Identifier        │BoundStatement boundStatement =        │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│                  │preparedStatement.bind(values)         │    │                       │                                        │
+│Identifier        │this.session.execute(boundStatement)   │113 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Call              │this.session.execute(boundStatement)   │113 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│MethodParameterOut│RET                                    │94  │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Identifier        │this.writeInternal(event, layout !=    │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │null ? layout.toSerializable(event) :  │    │                       │                                        │
+│                  │null)                                  │    │                       │                                        │
+│Call              │layout != null                         │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Call              │this.layout.toSerializable(event)      │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterIn │toSerializable(this, LogEvent event)   │82  │toSerializable         │log4j-core/src/main/java/org/apache/logging/log4j/core/Layout.java│
+│MethodParameterOut│RET                                    │82  │toSerializable         │log4j-core/src/main/java/org/apache/logging/log4j/core/Layout.java│
+│Call              │this.layout.toSerializable(event)      │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.writeInternal(event, layout !=    │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │null ? layout.toSerializable(event) :  │    │                       │                                        │
+│                  │null)                                  │    │                       │                                        │
+│MethodParameterIn │writeInternal(this, LogEvent event,    │323 │writeInternal          │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │Serializable serializable)             │    │                       │                                        │
+│MethodParameterOut│RET                                    │323 │writeInternal          │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.writeInternal(event, layout !=    │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │null ? layout.toSerializable(event) :  │    │                       │                                        │
+│                  │null)                                  │    │                       │                                        │
+│Identifier        │this.commitAndClose()                  │195 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterIn │commitAndClose(this)                   │663 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.connection != null                │667 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.connection.isClosed()             │667 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │this.isBuffered()                      │668 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│MethodParameterIn │isBuffered(this)                       │202 │isBuffered             │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Call              │this.bufferSize > 0                    │203 │isBuffered             │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterOut│RET                                    │202 │isBuffered             │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.isBuffered()                      │668 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement != null                 │668 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │logger().debug("Executing batch        │669 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │PreparedStatement {}", this.statement) │    │                       │                                        │
+│MethodParameterIn │debug(this, String message, Object p0) │550 │debug                  │log4j-api/src/main/java/org/apache/logging/log4j/Logger.java│
+│MethodParameterOut│RET                                    │550 │debug                  │log4j-api/src/main/java/org/apache/logging/log4j/Logger.java│
+│Call              │logger().debug("Executing batch        │669 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │PreparedStatement {}", this.statement) │    │                       │                                        │
+│Call              │this.statement.executeBatch()          │672 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.executeBatch()          │672 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+└──────────────────┴───────────────────────────────────────┴────┴───────────────────────┴────────────────────────────────────────┘
+
+┌──────────────────┬───────────────────────────────────────┬────┬───────────────────────┬────────────────────────────────────────┐
+│nodeType          │tracked                                │line│method                 │file                                    │
+├──────────────────┼───────────────────────────────────────┼────┼───────────────────────┼────────────────────────────────────────┤
+│Call              │this.registry.get(type)                │77  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Identifier        │TypeConverter primary =                │77  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│                  │registry.get(type)                     │    │                       │                                        │
+│Identifier        │primary != null                        │79  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Identifier        │return primary;                        │80  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Return            │return primary;                        │80  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│MethodReturn      │RET                                    │75  │findCompatibleConverter│log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverterRegistry.java│
+│Call              │TypeConverterRegistry.getInstance().findCompatibleConverter(clazz)│429 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│Call              │(TypeConverter<T>)                     │429 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │TypeConverterRegistry.getInstance().findCompatibleConverter(clazz)│    │                       │                                        │
+│Identifier        │TypeConverter converter =              │428 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │(TypeConverter<T>)                     │    │                       │                                        │
+│                  │TypeConverterRegistry.getInstance().findCompatibleConverter(clazz)│    │                       │                                        │
+│Identifier        │parseDefaultValue(converter,           │433 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│MethodParameterIn │parseDefaultValue(final                │449 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │TypeConverter<T> converter, final      │    │                       │                                        │
+│                  │Object defaultValue)                   │    │                       │                                        │
+│Identifier        │converter.convert((String)             │457 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│Call              │converter.convert((String)             │457 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│Return            │return converter.convert((String)      │457 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue);                         │    │                       │                                        │
+│MethodReturn      │RET                                    │449 │parseDefaultValue      │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│Call              │parseDefaultValue(converter,           │433 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue)                          │    │                       │                                        │
+│Return            │return parseDefaultValue(converter,    │433 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│                  │defaultValue);                         │    │                       │                                        │
+│MethodReturn      │RET                                    │426 │convert                │log4j-core/src/main/java/org/apache/logging/log4j/core/config/plugins/convert/TypeConverters.java│
+│Call              │TypeConverters.convert(columnMapping.getLayout().toSerializable(event),│107 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│                  │columnMapping.getType(), null)         │    │                       │                                        │
+│Call              │values[i] =                            │107 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│                  │TypeConverters.convert(columnMapping.getLayout().toSerializable(event),│    │                       │                                        │
+│                  │columnMapping.getType(), null)         │    │                       │                                        │
+│Call              │this.preparedStatement.bind(values)    │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Call              │this.preparedStatement.bind(values)    │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Call              │this.preparedStatement.bind(values)    │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Identifier        │BoundStatement boundStatement =        │111 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│                  │preparedStatement.bind(values)         │    │                       │                                        │
+│Identifier        │this.session.execute(boundStatement)   │113 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Call              │this.session.execute(boundStatement)   │113 │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│MethodParameterOut│RET                                    │94  │writeInternal          │log4j-cassandra/src/main/java/org/apache/logging/log4j/cassandra/CassandraManager.java│
+│Identifier        │this.writeInternal(event, layout !=    │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │null ? layout.toSerializable(event) :  │    │                       │                                        │
+│                  │null)                                  │    │                       │                                        │
+│Call              │layout != null                         │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Call              │this.layout.toSerializable(event)      │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterIn │toSerializable(this, LogEvent event)   │82  │toSerializable         │log4j-core/src/main/java/org/apache/logging/log4j/core/Layout.java│
+│MethodParameterOut│RET                                    │82  │toSerializable         │log4j-core/src/main/java/org/apache/logging/log4j/core/Layout.java│
+│Call              │this.layout.toSerializable(event)      │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.writeInternal(event, layout !=    │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │null ? layout.toSerializable(event) :  │    │                       │                                        │
+│                  │null)                                  │    │                       │                                        │
+│MethodParameterIn │writeInternal(this, LogEvent event,    │323 │writeInternal          │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │Serializable serializable)             │    │                       │                                        │
+│MethodParameterOut│RET                                    │323 │writeInternal          │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.writeInternal(event, layout !=    │192 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│                  │null ? layout.toSerializable(event) :  │    │                       │                                        │
+│                  │null)                                  │    │                       │                                        │
+│Identifier        │this.commitAndClose()                  │195 │flush                  │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterIn │commitAndClose(this)                   │663 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.connection != null                │667 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.connection.isClosed()             │667 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │this.isBuffered()                      │668 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│MethodParameterIn │isBuffered(this)                       │202 │isBuffered             │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Call              │this.bufferSize > 0                    │203 │isBuffered             │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterOut│RET                                    │202 │isBuffered             │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.isBuffered()                      │668 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement != null                 │668 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │logger().debug("Executing batch        │669 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │PreparedStatement {}", this.statement) │    │                       │                                        │
+│MethodParameterIn │debug(this, String message, Object p0) │550 │debug                  │log4j-api/src/main/java/org/apache/logging/log4j/Logger.java│
+│MethodParameterOut│RET                                    │550 │debug                  │log4j-api/src/main/java/org/apache/logging/log4j/Logger.java│
+│Call              │logger().debug("Executing batch        │669 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │PreparedStatement {}", this.statement) │    │                       │                                        │
+│Call              │this.statement.executeBatch()          │672 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │logger().debug("{} executing batch     │674 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │PreparedStatement {}, retrying.", e,   │    │                       │                                        │
+│                  │this.statement)                        │    │                       │                                        │
+│MethodParameterIn │debug(this, String message, Object p0, │560 │debug                  │log4j-api/src/main/java/org/apache/logging/log4j/Logger.java│
+│                  │Object p1)                             │    │                       │                                        │
+│MethodParameterOut│RET                                    │560 │debug                  │log4j-api/src/main/java/org/apache/logging/log4j/Logger.java│
+│Call              │logger().debug("{} executing batch     │674 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │PreparedStatement {}, retrying.", e,   │    │                       │                                        │
+│                  │this.statement)                        │    │                       │                                        │
+│Call              │this.statement.executeBatch()          │675 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.executeBatch()          │675 │commitAndClose         │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+└──────────────────┴───────────────────────────────────────┴────┴───────────────────────┴────────────────────────────────────────┘
+
+┌──────────────────┬────────────────────────────────────────────┬────┬─────────────┬─────────────────────────────────────────────┐
+│nodeType          │tracked                                     │line│method       │file                                         │
+├──────────────────┼────────────────────────────────────────────┼────┼─────────────┼─────────────────────────────────────────────┤
+│Call              │column.getColumnNameKey()                   │1016│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│MethodParameterIn │truncate(this, final String nameKey, Object │929 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │value)                                      │    │             │                                             │
+│Identifier        │this.columnMetaData.get(nameKey)            │931 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.columnMetaData.get(nameKey)            │931 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │logger().error("Missing                     │940 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │ResultSetColumnMetaData for {},             │    │             │                                             │
+│                  │connection={}, statement={}", nameKey,      │    │             │                                             │
+│                  │connection, statement)                      │    │             │                                             │
+│Call              │logger().error("Missing                     │940 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │ResultSetColumnMetaData for {},             │    │             │                                             │
+│                  │connection={}, statement={}", nameKey,      │    │             │                                             │
+│                  │connection, statement)                      │    │             │                                             │
+│MethodParameterOut│RET                                         │929 │truncate     │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │this.truncate(column.getColumnNameKey(),    │1015│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │column.getLayout().toSerializable(event))   │    │             │                                             │
+│Call              │this.statement.setString(j++,               │1012│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │Objects.toString(truncate(column.getColumnNameKey(),│    │             │                                             │
+│                  │column.getLayout().toSerializable(event)),  │    │             │                                             │
+│                  │null))                                      │    │             │                                             │
+│Call              │this.statement.setTimestamp(j++, new        │995 │writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│                  │Timestamp(event.getTimeMillis()))           │    │             │                                             │
+│Call              │this.statement.setNClob(j++, reader)        │999 │writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.setClob(j++, reader)         │1001│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Identifier        │this.isBuffered()                           │1022│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│MethodParameterIn │isBuffered(this)                            │202 │isBuffered   │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Call              │this.bufferSize > 0                         │203 │isBuffered   │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│MethodParameterOut│RET                                         │202 │isBuffered   │log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/AbstractDatabaseManager.java│
+│Identifier        │this.isBuffered()                           │1022│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.executeUpdate()              │1026│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+│Call              │this.statement.executeUpdate()              │1026│writeInternal│log4j-core/src/main/java/org/apache/logging/log4j/core/appender/db/jdbc/JdbcDatabaseManager.java│
+└──────────────────┴────────────────────────────────────────────┴────┴─────────────┴─────────────────────────────────────────────┘

@@ -1,0 +1,58 @@
+# ============================================================================
+# Eigene Semgrep-Regeln (NICHT aus den Community-Packs p/java, p/owasp-top-ten)
+# Projekt: Apache Log4j 2 (rel/2.26.0)
+# Zweck: Log4j-spezifische Sinks finden, die die generischen Packs übersehen.
+# Test:  semgrep --config custom_rules.yaml ./logging-log4j2/
+# ============================================================================
+
+rules:
+  # --------------------------------------------------------------------------
+  # Regel 1 — JNDI-Lookup-Sink (Log4Shell-Klasse, CVE-2021-44228)
+  # Generische Packs flaggen dieses Log4j-spezifische Muster NICHT.
+  # Matcht jeden .lookup(...)-Aufruf, dessen Argument KEIN String-Literal ist
+  # (konstante Lookups sind i. d. R. unkritisch).
+  # --------------------------------------------------------------------------
+  - id: log4j-jndi-lookup-sink
+    message: >
+      JNDI-Lookup erkannt. Wird das Argument von geloggten bzw. nutzergesteuerten
+      Daten beeinflusst, ist dies die Log4Shell-Sink-Klasse (CVE-2021-44228).
+      Manuelles Triage erforderlich: Quelle des Lookup-Namens pruefen.
+    severity: WARNING
+    languages: [java]
+    patterns:
+      - pattern: $CTX.lookup($NAME)
+      # Konstante String-Literale ausschliessen (negativer Lookahead):
+      - metavariable-regex:
+          metavariable: $NAME
+          regex: '^(?!\s*").+'
+    metadata:
+      category: security
+      cwe: "CWE-917: Expression Language Injection"
+      owasp: "A03:2021 - Injection"
+      confidence: MEDIUM
+      references:
+        - https://nvd.nist.gov/vuln/detail/CVE-2021-44228
+
+  # --------------------------------------------------------------------------
+  # Regel 2 — XML-Parser mit aktivierter DTD-Validierung (XXE)
+  # Praeziser als die Community-Regel: feuert auf setValidating(true),
+  # das DTD-Verarbeitung aktiv einschaltet. Trifft den realen TP in
+  # log4j-1.2-api (setValidating(true)) und NICHT den gehaerteten
+  # log4j-core-Parser (setValidating(false)).
+  # --------------------------------------------------------------------------
+  - id: xml-dbf-validating-enabled
+    message: >
+      DocumentBuilderFactory mit setValidating(true) aktiviert DTD-Verarbeitung.
+      Ohne explizites Abschalten externer Entities (disableDtdProcessing /
+      external-general-entities = false) ist dies eine XXE-Angriffsflaeche.
+    severity: ERROR
+    languages: [java]
+    patterns:
+      - pattern: $F.setValidating(true)
+    metadata:
+      category: security
+      cwe: "CWE-611: Improper Restriction of XML External Entity Reference"
+      owasp: "A05:2021 - Security Misconfiguration"
+      confidence: HIGH
+      references:
+        - https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html

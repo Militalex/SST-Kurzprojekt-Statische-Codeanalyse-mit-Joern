@@ -1,0 +1,8 @@
+.metals/
+.scala-build/
+.bsp/
+workspace/
+target/
+.bloop
+project/
+.claude/

@@ -1,0 +1,222 @@
+[INFO ] initialising from existing storage (/workspaces/03 Präsentation -off/01 Code/Joern/workspace/cpg.bin12/cpg.bin.tmp)
+---------------
+Joern Querries:
+---------------
+Anzahl der Methodenaufrufe: 110371
+---------------
+Anzahl der Methodenaufrufe mit dem Substring "execute": 47
+Anzahl der Methodenaufrufe mit dem Substring "run": 20
+Anzahl der Methodenaufrufe mit dem Substring "runtime": 8
+Anzahl der Methodenaufrufe mit dem Substring "invoke": 41
+Anzahl der Methodenaufrufe mit dem Substring "eval": 15
+Anzahl der Methodenaufrufe mit dem Substring "perform": 0
+Anzahl der Methodenaufrufe mit dem Substring "write": 519
+Anzahl der Methodenaufrufe mit dem Substring "writeObject": 60
+Anzahl der Methodenaufrufe mit dem Substring "read": 210
+Anzahl der Methodenaufrufe mit dem Substring "readObject": 22
+Anzahl der Methodenaufrufe mit dem Substring "send": 27
+Anzahl der Methodenaufrufe mit dem Substring "dispatch": 5
+Anzahl der Methodenaufrufe mit dem Substring "forward": 0
+Anzahl der Methodenaufrufe mit dem Substring "emit": 4
+Anzahl der Methodenaufrufe mit dem Substring "transmit": 0
+Anzahl der Methodenaufrufe mit dem Substring "broadcast": 0
+Anzahl der Methodenaufrufe mit dem Substring "process": 41
+Anzahl der Methodenaufrufe mit dem Substring "handle": 44
+Anzahl der Methodenaufrufe mit dem Substring "parse": 341
+Anzahl der Methodenaufrufe mit dem Substring "transform": 1
+Anzahl der Methodenaufrufe mit dem Substring "convert": 74
+Anzahl der Methodenaufrufe mit dem Substring "render": 137
+Anzahl der Methodenaufrufe mit dem Substring "append": 1863
+Anzahl der Methodenaufrufe mit dem Substring "publish": 18
+Anzahl der Methodenaufrufe mit dem Substring "format": 469
+Anzahl der Methodenaufrufe mit dem Substring "lookup": 28
+Anzahl der Methodenaufrufe mit dem Substring "do": 41
+Anzahl der Methodenaufrufe mit dem Substring "get": 4632
+Anzahl der Methodenaufrufe mit dem Substring "getInstance": 105
+---------------
+Beispielhaft: Die "execute" Methoden: 
+- - - - -
+execute(1)
+execute(java.lang.String,javax.script.Bindings)
+executeBatch()
+executeUpdate()
+execute()
+execute(java.lang.Runnable)
+execute(java.nio.file.FileVisitor)
+execute(java.lang.String,java.io.File,java.io.File,boolean)
+executeScript()
+execute(java.io.File,java.io.File,boolean)
+execute(java.io.File,java.io.File,boolean,int)
+execute(boolean)
+setExecuteExistingDelayedTasksAfterShutdownPolicy(boolean)
+execute(javax.script.Bindings)
+execute(org.apache.logging.log4j.core.tools.picocli.CommandLine)
+execute(java.lang.String)
+executeUpdate(java.lang.String)
+- - - - -
+Beispielhaft: Die "execute" Methoden mit Klassen: 
+execute(1) in der Klasse: "com.datastax.driver.core.Session"
+execute(java.lang.String,javax.script.Bindings) in der Klasse: "org.apache.logging.log4j.core.script.ScriptManager"
+executeBatch() in der Klasse: "java.sql.PreparedStatement"
+executeUpdate() in der Klasse: "java.sql.PreparedStatement"
+execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.Action"
+execute(java.lang.Runnable) in der Klasse: "java.util.concurrent.ExecutorService"
+execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.AbstractAction"
+execute(java.nio.file.FileVisitor) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.AbstractPathAction"
+execute(java.lang.String,java.io.File,java.io.File,boolean) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.CommonsCompressAction"
+execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.CompositeAction"
+executeScript() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.DeleteAction"
+execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.AbstractPathAction"
+execute(java.io.File,java.io.File,boolean) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.FileRenameAction"
+execute(java.io.File,java.io.File,boolean,int) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.GzCompressAction"
+execute(java.io.File,java.io.File,boolean,int) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.ZipCompressAction"
+execute(boolean) in der Klasse: "org.apache.logging.log4j.core.async.RingBufferLogEvent"
+setExecuteExistingDelayedTasksAfterShutdownPolicy(boolean) in der Klasse: "java.util.concurrent.ScheduledThreadPoolExecutor"
+execute(javax.script.Bindings) in der Klasse: "org.apache.logging.log4j.core.script.ScriptManager$MainScriptRunner"
+execute(javax.script.Bindings) in der Klasse: "org.apache.logging.log4j.core.script.ScriptManager$ScriptRunner"
+execute(org.apache.logging.log4j.core.tools.picocli.CommandLine) in der Klasse: "org.apache.logging.log4j.core.tools.picocli.CommandLine"
+execute(java.lang.String) in der Klasse: "java.sql.Statement"
+executeUpdate(java.lang.String) in der Klasse: "java.sql.Statement"
+- - - - -
+Beispielhaft: Die "execute" Methoden noch etwas genauer: 
+- - - - -
+<unresolvedSignature> execute(1) in der Klasse: "com.datastax.driver.core.Session"
+java.lang.Object execute(java.lang.String,javax.script.Bindings) in der Klasse: "org.apache.logging.log4j.core.script.ScriptManager"
+int[] executeBatch() in der Klasse: "java.sql.PreparedStatement"
+int executeUpdate() in der Klasse: "java.sql.PreparedStatement"
+boolean execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.Action"
+void execute(java.lang.Runnable) in der Klasse: "java.util.concurrent.ExecutorService"
+boolean execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.AbstractAction"
+boolean execute(java.nio.file.FileVisitor) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.AbstractPathAction"
+boolean execute(java.lang.String,java.io.File,java.io.File,boolean) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.CommonsCompressAction"
+boolean execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.CompositeAction"
+boolean executeScript() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.DeleteAction"
+boolean execute() in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.AbstractPathAction"
+boolean execute(java.io.File,java.io.File,boolean) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.FileRenameAction"
+boolean execute(java.io.File,java.io.File,boolean,int) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.GzCompressAction"
+boolean execute(java.io.File,java.io.File,boolean,int) in der Klasse: "org.apache.logging.log4j.core.appender.rolling.action.ZipCompressAction"
+void execute(boolean) in der Klasse: "org.apache.logging.log4j.core.async.RingBufferLogEvent"
+void setExecuteExistingDelayedTasksAfterShutdownPolicy(boolean) in der Klasse: "java.util.concurrent.ScheduledThreadPoolExecutor"
+java.lang.Object execute(javax.script.Bindings) in der Klasse: "org.apache.logging.log4j.core.script.ScriptManager$MainScriptRunner"
+java.lang.Object execute(javax.script.Bindings) in der Klasse: "org.apache.logging.log4j.core.script.ScriptManager$ScriptRunner"
+java.lang.Object execute(org.apache.logging.log4j.core.tools.picocli.CommandLine) in der Klasse: "org.apache.logging.log4j.core.tools.picocli.CommandLine"
+boolean execute(java.lang.String) in der Klasse: "java.sql.Statement"
+int executeUpdate(java.lang.String) in der Klasse: "java.sql.Statement"
+---------------
+Taint Analyse: SQL-Injection
+src -> sink: 22 flows gefunden
+Sanitized: src -> sink: 14 flows gefunden
+Flows exported to: output/sql_san_flows.txt
+- - - - -
+7 True Positives (TP) needing further analysis: 
+#02 - but very long
+#03
+#05
+#07
+#10 - but very long
+#12 - but very long
+#14 - but very long
+- - - - -
+7 False Positives (FP): 
+#01 - not attacker controlled
+#04
+#06 - doubled
+#08
+#09 - not controlled ny attacker
+#11
+#13
+- - - - -
+Concluding Remarks: 
+- TP quite long
+- TP need further analysis
+- one place where sql happens
+- almost all flows run over the same code
+- effect of statement.clearParameters() unknown: why set once and clear again before execute?
+---------------
+Taint Analyse: Command Injection
+Wieviele ProcessBuilder benutzt: 0
+src -> sink: 150 flows gefunden
+Sanitized: src -> sink: 38 flows gefunden
+Flows exported to: output/cmd_san_flows.txt
+- - - - -
+18 True Positives (TP) needing further analysis: 
+#01
+#02
+#05
+#06
+#16
+#18 - short
+#19
+#20 - short
+#21
+#23 - short but mabey parsed
+#24
+#25
+#26
+#28 - very short !
+#31 - short but mabey parsed
+#32
+#35
+#36 - short but mabey parsed
+- - - - -
+20 False Positives (FP): 
+#03 - doubled
+#04 - but very long
+#06 - doubled
+#07 - very long
+#08 - doubled
+#09 - very long and has subset
+#10 - very long
+#11 - very long
+#12 - very long
+#13 - doubled
+#14 - very long
+#15 - very long
+#17 - very long
+#22 - very long
+#27 - very long
+#29 - very long
+#30 - very long
+#33 - long
+#34 - very long
+#37 - very long
+- - - - -
+SUS:
+
+┌────────────┬────────────────────────────────────────┬────┬─────────────────┬─────────────────────────────────────────┐
+│nodeType    │tracked                                 │line│method           │file                                     │
+├────────────┼────────────────────────────────────────┼────┼─────────────────┼─────────────────────────────────────────┤
+│Call        │parsed.getCommand()                     │455 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Identifier  │Object command = parsed.getCommand()    │455 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Identifier  │command instanceof Runnable             │456 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Identifier  │command instanceof Callable             │463 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Call        │(Callable<Object>) command              │465 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Call        │(Callable<Object>) command.call()       │465 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Return      │return ((Callable<Object>)              │465 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│            │command).call();                        │    │                 │                                         │
+│MethodReturn│RET                                     │454 │execute          │log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+│Call        │execute(parsedCommands.get(0))          │500 │handleParseResult│log4j-core/src/main/java/org/apache/logging/log4j/core/tools/picocli/CommandLine.java│
+└────────────┴────────────────────────────────────────┴────┴─────────────────┴─────────────────────────────────────────┘,
+
+Very SUS:
+┌────────────┬────────────────────────────────────────────┬────┬─────────┬─────────────────────────────────────────────┐
+│nodeType    │tracked                                     │line│method   │file                                         │
+├────────────┼────────────────────────────────────────────┼────┼─────────┼─────────────────────────────────────────────┤
+│Call        │this.script.getScriptText()                 │260 │execute  │log4j-core/src/main/java/org/apache/logging/log4j/core/script/ScriptManager.java│
+│Call        │this.scriptEngine.eval(script.getScriptText(),│260 │execute  │log4j-core/src/main/java/org/apache/logging/log4j/core/script/ScriptManager.java│
+│            │bindings)                                   │    │         │                                             │
+│Call        │this.scriptEngine.eval(script.getScriptText(),│260 │execute  │log4j-core/src/main/java/org/apache/logging/log4j/core/script/ScriptManager.java│
+│            │bindings)                                   │    │         │                                             │
+│Return      │return                                      │260 │execute  │log4j-core/src/main/java/org/apache/logging/log4j/core/script/ScriptManager.java│
+│            │scriptEngine.eval(script.getScriptText(),   │    │         │                                             │
+│            │bindings);                                  │    │         │                                             │
+│MethodReturn│RET                                         │250 │execute  │log4j-core/src/main/java/org/apache/logging/log4j/core/script/ScriptManager.java│
+│Call        │scriptRunner.execute(bindings)              │203 │<lambda>0│log4j-core/src/main/java/org/apache/logging/log4j/core/script/ScriptManager.java│
+└────────────┴────────────────────────────────────────────┴────┴─────────┴─────────────────────────────────────────────┘
+- - - - -
+Concluding Remarks: 
+- TP flows are similar, have same source but different endings
+- file names und script text als Angrifssvektoren
+- very long paths
+- above very suspicious
+---------------
